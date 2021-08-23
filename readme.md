@@ -1,19 +1,10 @@
 # Epic for Expense Tracker app
 
 1. Design models Expense and Budget
-	i. User
-
-	- name
-
-	ii. Expense
+	i. Expense
 
 	- Category, Spent, Date, Comment
 	- functions to get specific reault set
-
-	iii. Budget 
-
-	- User_id, Limit
-
 
 2. URLS 
 
