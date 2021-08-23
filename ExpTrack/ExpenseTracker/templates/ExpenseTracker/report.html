@@ -1,0 +1,46 @@
+{% extends 'ExpenseTracker/base.html' %}
+
+
+{%  block body %}
+	<h4> Viewing all Expenses </h4>
+	<table class="table">
+	<thead>
+	<tr>
+		<th scope="col">#</th>
+		<th scope="col">Category</th>
+		<th scope="col">Spent</th>
+		<th scope="col">Date</th>
+		<th scope="col">Comment</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for expense in expenses %}
+		<tr>
+			<th scope="row"><a href="#">{{expense.id}}</a></th>
+			<td><a href="#">{{expense.category}}</a></td>
+			<td>{{expense.spent}}</td>
+			<td>{{expense.date}}</td>
+			<td>{{expense.comment}}</td>
+			
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<a href="{% url 'add' %}">
+<button type="button" class="btn btn-link">Add An Expense</button>
+</a>
+
+<a href="{% url 'prev_month_exp' %}">
+<button type="button" class="btn btn-link">View Last Month Expense</button>
+</a>
+
+<a href="{% url 'current_month_exp' %}">
+<button type="button" class="btn btn-link">View Current Month Expense</button>
+</a>
+
+<a href="{% url 'year_exp' %}">
+<button type="button" class="btn btn-link">View yearly Expense</button>
+</a>
+
+{% endblock %}
